@@ -1,0 +1,66 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                     ~
+                                                     ~
+                                                     ~
+                                                     ~
+                      'Docker'                       ~
+                                                     ~
+                                                     ~
+                                                     ~
+                                                     ~
+                                                     ~
+                                                     ~
+                                                     ~
+                                                     ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//////////////////////////////////////
+                IMAGES               /
+//////////////////////////////////////
+
+docker build -t <name>:<tag> <src>
+#create image from 'src' 'name' with
+#'name' and 'tag'
+
+docker run hello-world
+#start docker with image 'hello world'
+
+docker images
+#view docker images
+
+docker search <name>
+#find image 'name' on the internet
+
+docker pull <name>
+#download image 'name' on the internet
+
+docker rmi <name>
+#remove image 'name'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+//////////////////////////////////////
+                containers           /
+//////////////////////////////////////
+
+docker ps -a
+#show running containers
+#(-a) show all containers that were running
+
+docker run -it -p 1234:8080 <name>
+#launch to container 'name'
+#(-it) iteractive mode
+#(-p) redirect ports from 8080 to 1234
+
+docker run -d <name>
+#launch to container 'name' on 
+background mode, like a daemon
+
+docker rm <id>
+#remove container
+
+docker exec -it <id> /bin/bash
+#login to bash on container 'id'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
